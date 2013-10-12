@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lesson1</string>
+    <string name="confirm">Confirm</string>
+    <string name="ageText">Enter age:</string>
+    <string name="nameText">Enter name:</string>
+    <string name="viewResult">View result</string>
+    <string name="defaultAge">20</string>
+    <string name="defaultName">Sanya</string>
 </resources>
