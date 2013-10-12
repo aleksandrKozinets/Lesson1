@@ -16,7 +16,7 @@
                 android:id="@+id/textView1" android:layout_gravity="center" android:textSize="25dp"
                 android:textColor="#010100"/>
         <EditText android:layout_width="130dp" android:layout_height="40dp" android:id="@+id/editName"
-                  android:layout_gravity="center" android:editable="true" android:maxLines="2" android:maxLength="5"
+                  android:layout_gravity="center" android:editable="true" android:maxLines="2" android:maxLength="10"
                   android:inputType="text"/>
         <Button
                 android:layout_width="102dp"
