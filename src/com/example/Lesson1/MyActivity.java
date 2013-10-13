@@ -18,24 +18,26 @@ public class MyActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        Fragment nameFragment = new NameFragment();
-        Fragment ageFragment2 = new AgeFragment();
-        Fragment resultFragment3 = new ResutlFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                .replace(R.id.name_fragment, nameFragment);
+        if (savedInstanceState == null) {
+            Fragment nameFragment = new NameFragment();
+            Fragment ageFragment2 = new AgeFragment();
+            Fragment resultFragment3 = new ResutlFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.name_fragment, nameFragment);
 
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
 
-        fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                .replace(R.id.age_fragment, ageFragment2);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+            fragmentTransaction = getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.age_fragment, ageFragment2);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
 
-        fragmentTransaction = getSupportFragmentManager().beginTransaction()
-                .replace(R.id.result_fragment, resultFragment3);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+            fragmentTransaction = getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.result_fragment, resultFragment3);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
 
     }
 
@@ -46,20 +48,20 @@ public class MyActivity extends FragmentActivity {
         TextView textViewNameResult;
         TextView textViewAgeResult;
 
-        switch (view.getId()){
-            case R.id.ageButton:   {
+        switch (view.getId()) {
+            case R.id.ageButton: {
                 textViewResultForNameOrAge = (TextView) findViewById(R.id.ageView);
                 textViewInputFieldForNameOrAGe = (TextView) findViewById(R.id.editAge);
                 textViewResultForNameOrAge.setText(textViewInputFieldForNameOrAGe.getText());
                 break;
             }
-            case R.id.nameButton:   {
+            case R.id.nameButton: {
                 textViewResultForNameOrAge = (TextView) findViewById(R.id.nameView);
                 textViewInputFieldForNameOrAGe = (TextView) findViewById(R.id.editName);
                 textViewResultForNameOrAge.setText(textViewInputFieldForNameOrAGe.getText());
                 break;
             }
-            case R.id.resultButton:   {
+            case R.id.resultButton: {
                 textViewResultForNameOrAge = (TextView) findViewById(R.id.resultView);
                 textViewAgeResult = (TextView) findViewById(R.id.ageView);
                 textViewNameResult = (TextView) findViewById(R.id.nameView);
