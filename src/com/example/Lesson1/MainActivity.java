@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TextView;
 
-public class MyActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity {
     /**
      * Called when the activity is first created.
      */
@@ -25,17 +25,14 @@ public class MyActivity extends FragmentActivity {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction()
                     .replace(R.id.name_fragment, nameFragment);
 
-            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
 
             fragmentTransaction = getSupportFragmentManager().beginTransaction()
                     .replace(R.id.age_fragment, ageFragment2);
-            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
 
             fragmentTransaction = getSupportFragmentManager().beginTransaction()
                     .replace(R.id.result_fragment, resultFragment3);
-            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
 
