@@ -1,22 +1,30 @@
 package com.example.Lesson1;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
 
+import android.support.v7.app.ActionBar;
+
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends ActionBarActivity {
     /**
      * Called when the activity is first created.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         if (savedInstanceState == null) {
             Fragment nameFragment = new NameFragment();
@@ -67,7 +75,6 @@ public class MainActivity extends FragmentActivity {
             }
 
         }
-
     }
 
 
