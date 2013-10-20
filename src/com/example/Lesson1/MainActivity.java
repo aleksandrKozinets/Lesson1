@@ -23,10 +23,8 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     private ActionBarDrawerToggle mDrawerToggle;
-    private CharSequence defaultName = "Sanya";
-    private CharSequence defaultAge = "20";
-    private CharSequence name;
-    private CharSequence age;
+    private CharSequence name = "";
+    private CharSequence age = "";
     private FragmentTransaction fragmentTransaction;
     private Fragment nameFragment;
     private Fragment ageFragment;
@@ -46,8 +44,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        name = defaultName;
-        age = defaultAge;
         mPlanetTitles = getResources().getStringArray(R.array.planets_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
@@ -141,7 +137,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void selectItem(int position) {
-
+        TextView textViewResultForNameOrAge;
+        TextView textViewInputFieldForNameOrAge;
         switch (position) {
             case 0: {
                 nameFragment = new NameFragment();
