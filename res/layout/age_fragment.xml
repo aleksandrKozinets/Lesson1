@@ -15,15 +15,20 @@
         <EditText
                 android:layout_width="130dp"
                 android:layout_height="40dp"
-                android:id="@+id/editAge" android:layout_gravity="center" android:inputType="number"
+                android:id="@+id/edit_age" android:layout_gravity="center" android:inputType="number"
                 android:maxLength="2"/>
         <Button
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:text="@string/confirm"
-                android:id="@+id/ageButton" android:layout_gravity="center" android:onClick="onClick"/>
+                android:id="@+id/age_button" android:layout_gravity="center" android:onClick="onClick"/>
         <TextView android:layout_width="84dp" android:layout_height="27dp" android:id="@+id/ageView"
                   android:layout_gravity="center" android:focusable="false" android:clickable="false"
                   android:singleLine="true" android:textColor="#010100" android:text="@string/defaultAge"/>
+        <Button
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:id="@+id/next_button2" android:layout_gravity="center" android:onClick="onClick"/>
     </LinearLayout>
 </LinearLayout>

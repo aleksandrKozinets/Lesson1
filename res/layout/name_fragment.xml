@@ -15,14 +15,14 @@
                 android:text="@string/nameText"
                 android:id="@+id/textView1" android:layout_gravity="center" android:textSize="25dp"
                 android:textColor="#010100"/>
-        <EditText android:layout_width="130dp" android:layout_height="40dp" android:id="@+id/editName"
+        <EditText android:layout_width="130dp" android:layout_height="40dp" android:id="@+id/edit_name"
                   android:layout_gravity="center" android:editable="true" android:maxLines="2" android:maxLength="10"
                   android:inputType="text"/>
         <Button
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:text="@string/confirm"
-                android:id="@+id/nameButton" android:layout_gravity="center" android:onClick="onClick"
+                android:id="@+id/name_button" android:layout_gravity="center" android:onClick="onClick"
                 android:longClickable="true"/>
         <TextView
                 android:layout_width="101dp"
@@ -30,5 +30,11 @@
                 android:id="@+id/nameView" android:layout_gravity="center" android:focusable="false"
                 android:maxLength="10" android:maxLines="2" android:text="@string/defaultName"
                 android:textColor="#010100"/>
+        <Button
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:id="@+id/next_button1" android:layout_gravity="center" android:longClickable="false"
+                android:onClick="onClick"/>
     </LinearLayout>
 </LinearLayout>

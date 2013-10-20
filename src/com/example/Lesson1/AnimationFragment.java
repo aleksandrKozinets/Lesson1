@@ -6,14 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class NameFragment extends Fragment {
-    public static final String ARG_PLANET_NUMBER = "planet_number";
+public class AnimationFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.name_fragment, container, false);
-
-    }
-
+		return inflater.inflate(R.layout.animation_fragment, container, false);
+	}
 
 }

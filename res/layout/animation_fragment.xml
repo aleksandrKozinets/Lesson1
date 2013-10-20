@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/animation"
+            android:onClick="startAnimation1"/>
+    <TextView
+            android:id="@+id/animation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:textSize="10sp"
+            android:text="@string/hello_world" android:onClick="startAnimation1"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/animation"
+            android:onClick="startAnimation2"/>
+    <TextView
+            android:id="@+id/animation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:textSize="10sp"
+            android:text="@string/hello_world" android:focusableInTouchMode="true" android:onClick="startAnimation2"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/animation"
+            android:onClick="startAnimation3"/>
+    <TextView
+            android:id="@+id/animation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:textSize="10sp"
+            android:text="@string/hello_world" android:onClick="startAnimation3"/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/animation"
+            android:onClick="startAnimation4"/>
+    <TextView
+            android:id="@+id/animation4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:textSize="10sp"
+            android:text="@string/hello_world" android:onClick="startAnimation4"/>
+
+</LinearLayout>
