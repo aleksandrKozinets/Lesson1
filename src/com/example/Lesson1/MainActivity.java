@@ -84,6 +84,26 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        // Saving variables
+        savedInstanceState.putCharSequence("age", age);
+        savedInstanceState.putCharSequence("name", name);
+
+        // Call at the end
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        // Call at the start
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Retrieve variables
+        age = savedInstanceState.getCharSequence("age");
+        name = savedInstanceState.getCharSequence("name");
+
+    }
 
     public void onClick(View view) {
         TextView textViewResultForNameOrAge;
