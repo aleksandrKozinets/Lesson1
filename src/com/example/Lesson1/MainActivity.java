@@ -23,8 +23,8 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     private ActionBarDrawerToggle mDrawerToggle;
-    private CharSequence defaultName;
-    private CharSequence defaultAge;
+    private CharSequence defaultName = "Sanya";
+    private CharSequence defaultAge = "20";
     private CharSequence name;
     private CharSequence age;
     private FragmentTransaction fragmentTransaction;
@@ -95,14 +95,14 @@ public class MainActivity extends ActionBarActivity {
 
         switch (view.getId()) {
             case R.id.age_button: {
-                textViewResultForNameOrAge = (TextView) findViewById(R.id.ageView);
+                textViewResultForNameOrAge = (TextView) findViewById(R.id.age_view);
                 textViewInputFieldForNameOrAge = (TextView) findViewById(R.id.edit_age);
                 age = textViewInputFieldForNameOrAge.getText();
                 textViewResultForNameOrAge.setText(age);
                 break;
             }
             case R.id.name_button: {
-                textViewResultForNameOrAge = (TextView) findViewById(R.id.nameView);
+                textViewResultForNameOrAge = (TextView) findViewById(R.id.name_view);
                 textViewInputFieldForNameOrAge = (TextView) findViewById(R.id.edit_name);
                 name = textViewInputFieldForNameOrAge.getText();
                 textViewResultForNameOrAge.setText(name);
@@ -114,12 +114,14 @@ public class MainActivity extends ActionBarActivity {
                 break;
             }
             case R.id.next_button1: {
+                ageFragment = new AgeFragment();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, ageFragment);
                 fragmentTransaction.commit();
                 break;
             }
             case R.id.next_button2: {
+                resultFragment = new ResutlFragment();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, resultFragment);
                 fragmentTransaction.commit();
@@ -139,25 +141,31 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void selectItem(int position) {
+
         switch (position) {
             case 0: {
+                nameFragment = new NameFragment();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, nameFragment);
                 fragmentTransaction.commit();
                 break;
             }
             case 1: {
+                ageFragment = new AgeFragment();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, ageFragment);
                 fragmentTransaction.commit();
                 break;
             }
             case 2: {
+                resultFragment = new ResutlFragment();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, resultFragment);
                 fragmentTransaction.commit();
+                break;
             }
             case 3: {
+                animationFragment = new AnimationFragment();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, animationFragment);
                 fragmentTransaction.commit();

@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/confirm"
                 android:id="@+id/age_button" android:layout_gravity="center" android:onClick="onClick"/>
-        <TextView android:layout_width="84dp" android:layout_height="27dp" android:id="@+id/ageView"
+        <TextView android:layout_width="84dp" android:layout_height="27dp" android:id="@+id/age_view"
                   android:layout_gravity="center" android:focusable="false" android:clickable="false"
                   android:singleLine="true" android:textColor="#010100" android:text="@string/defaultAge"/>
         <Button
